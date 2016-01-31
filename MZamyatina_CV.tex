@@ -26,6 +26,8 @@
 \usepackage{amssymb}
 \usepackage{MnSymbol}
 
+\usepackage{datetime}
+
 % Simpler bibsection for CV sections
 % (thanks to natbib for inspiration)
 \makeatletter
@@ -229,13 +231,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
+% Timestamp, comment if want to show photo instead
+\flushright{\small \texttt{Updated: \shortmonthname[\the\month] \the\year}}\flushleft
+
 \makeheading[\emph{Curriculum vitae}]{Maria Zamyatina}
 
-\begin{wrapfigure}{r}{0.25\textwidth}
-\includegraphics[width=0.25\textwidth]{photoCV_whitebackground.jpg}
-\end{wrapfigure}
+% Uncomment to show photo
+%\begin{figure}
+%\includegraphics[width=0.25\textwidth]{photoCV_whitebackground.jpg}
+%\end{figure}
 
 \section{Personal Information}
+
 % NOTE: Mind where the & separators and \\ breaks are in the following
 %       table.
 %
@@ -245,11 +253,11 @@
 %\newlength{\rcollength}\setlength{\rcollength}{1.4in}%
 %
 %\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+%\end{tabular}%
 University of East Anglia, Norwich Research Park, Norwich, NR4 7TJ, UK\\
 +44 7925606193 \\
 \email{m.zamyatina@uea.ac.uk} \\
 {\href {https://mariazamyatina.wordpress.com/}{mariazamyatina.wordpress.com}}
-%\end{tabular}%
 
 \section{Research Interests}
 
@@ -257,8 +265,6 @@ University of East Anglia, Norwich Research Park, Norwich, NR4 7TJ, UK\\
 \item  Atmospheric chemistry 
 \item  Climate change
 \item  Numerical modelling
-\item  Paleoclimatology
-\item  Synoptic meteorology
 \end{innerlist}
 
 \section{Education}
