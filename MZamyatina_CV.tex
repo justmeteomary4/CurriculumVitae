@@ -12,6 +12,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[10pt]{article}
+%\usepackage{fontawesome} % E-mail, Twitter logos
 
 % The automated optical recognition software used to digitize resume
 % information works best with fonts that do not have serifs. This
@@ -19,6 +20,7 @@
 % least the second) to restore a Roman font (i.e., a font with serifs).
 %\usepackage{times}
 %\renewcommand{\familydefault}{\sfdefault}
+%\setmainfont{}
 
 % This is a helpful package that puts math inside length specifications
 \usepackage{calc}
@@ -28,8 +30,7 @@
 
 \usepackage{datetime}
 
-% Simpler bibsection for CV sections
-% (thanks to natbib for inspiration)
+% Simpler bibsection for CV sections (thanks to natbib for inspiration)
 \makeatletter
 \newlength{\bibhang}
 \setlength{\bibhang}{1em} %1em}
@@ -85,10 +86,10 @@
 
 %% Use these lines for A4-sized paper
 \usepackage[paper=a4paper,
-            %includefoot, % Uncomment to put page number above margin
-            marginparwidth=30.5mm,    % Length of section titles
+            includefoot, % Uncomment to put page number above margin
+            marginparwidth=42mm,      % Length of section titles 30.5mm
             marginparsep=1.5mm,       % Space between titles and text
-            margin=25mm,              % 25mm margins
+            margin=12mm,              % 25mm margins
             includemp]{geometry}
 
 %% More layout: Get rid of indenting throughout entire document
@@ -106,7 +107,7 @@
 %
 \usepackage{fancyhdr,lastpage}
 \pagestyle{fancy}
-%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
 \fancyhf{}\renewcommand{\headrulewidth}{0pt}
 \fancyfootoffset{\marginparsep+\marginparwidth}
 \newlength{\footpageshift}
@@ -226,6 +227,7 @@
     \TeX}}
 \providecommand\Matlab{\textsc{Matlab}}
 
+%\let\mathdollar\undefined % uncomment with using fontawesome
 %%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,9 +235,9 @@
 \begin{document}
 
 % Timestamp, comment if want to show photo instead
-\flushright{\small \texttt{Updated: \shortmonthname[\the\month] \the\year}}\flushleft
+\flushright{\small \texttt{\shortmonthname[\the\month] \the\year}}\flushleft
 
-\makeheading[\emph{Curriculum vitae}]{Maria Zamyatina}
+\makeheading[CV]{Maria Zamyatina}
 
 % Uncomment to show photo
 %\begin{figure}
@@ -254,263 +256,259 @@
 %
 %\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
 %\end{tabular}%
-University of East Anglia, Norwich Research Park, Norwich, NR4 7TJ, UK\\
-+44 7925606193 \\
-\email{m.zamyatina@uea.ac.uk} \\
-{\href {https://mariazamyatina.wordpress.com/}{mariazamyatina.wordpress.com}}
+%University of East Anglia, Norwich Research Park, Norwich, NR4 7TJ, UK\\
+%\faEnvelope~m.zamyatina@uea.ac.uk \faTwitter~chemeteomary \faGithub~chemarista \\
+\includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{email_logo_fontawesome.png} m.zamyatina@uea.ac.uk 
+\includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{twitter_logo_fontawesome.png} \href{https://twitter.com/m_zamyatina}{m$\_$zamyatina}
+\includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{github_logo_fontawesome.png} \href{https://github.com/mzamyatina}{mzamyatina} \\
+\includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{website_logo_fontawesome.png} \href{https://mariazamyatina.wordpress.com/}{mariazamyatina.wordpress.com}
 
 \section{Research Interests}
-
-\begin{innerlist}
-\item  Atmospheric chemistry 
-\item  Climate change
-\item  Numerical modelling
-\end{innerlist}
+atmospheric chemistry, numerical modelling, climate change
 
 \section{Education}
-\textbf{PhD in Environmental Sciences}  \hfill {Oct 2015 - present} \\
-\href{https://www.uea.ac.uk/environmental-sciences/}{School of Environmental Sciences} \\
-\href{https://www.uea.ac.uk/}{University of East Anglia}
+\textbf{PhD in Atmospheric Chemistry}  \hfill {2015-expected 2019} \\
+\href{https://www.uea.ac.uk/environmental-sciences/}{School of Environmental Sciences, University of East Anglia} $|$ Norwich, UK \\
+Supervisors: \href{https://people.uea.ac.uk/c_reeves}{Prof. Claire Reeves}, \href{https://www.ecmwf.int/en/about/who-we-are/staff-profiles/marcus-koehler}{Dr. Marcus K\"ohler}, \href{https://www.york.ac.uk/chemistry/staff/resstaff/mnewland/}{Dr. Mike Newland} \\
+Thesis: Impact of alkyl nitrate chemistry on tropospheric ozone: box and global model \\
+\hspace{1.1cm} perspectives
 \begin{innerlist}
-\item Thesis title: \emph{Is human activity affecting the atmosphere’s
-ability to clean itself of pollutants?}
-\item Supervisor: \href{mailto:c.reeves@uea.ac.uk}{Prof. Claire Reeves}
+\item updated chemical kinetics of \href{http://www.ukca.ac.uk/wiki/index.php/UKCA}{UKCA}'s standard tropospheric chemistry mechanism
+\item added new alkyl nitrate chemistry into UKCA
+\item tested new mechanism against the \href{http://mcm.leeds.ac.uk/MCM/home.htt}{Master Chemical Mechanism (MCM)} in a box model 
+\item validated UKCA with the \href{https://espo.nasa.gov/atom}{Atmospheric Tomography Mission (ATom)} aircraft data
+\item analysed $\text{HO}_\text{x}$, $\text{NO}_\text{x}$, $\text{NO}_\text{y}$ burdens and distribution in UKCA long-term runs with/without alkyl nitrate photochemical production/direct emissions
+\item contributed to the \href{https://www.researchgate.net/project/Oxidant-Budgets-of-the-Northern-Hemisphere-Troposphere-Since-1950-OXBUDS}{Oxidant Budgets of the Northern Hemisphere Troposphere Since 1950 (OXBUDS)} project
 \end{innerlist}
 
 \vspace{.1in}
-\textbf{MSc in Climate Change with Distinction}  \hfill {2015} \\
-\href{https://www.uea.ac.uk/environmental-sciences/}{School of Environmental Sciences} \\
-\href{https://www.uea.ac.uk/}{University of East Anglia}
-\begin{innerlist}
-\item Thesis title: \emph{Investigation of the relationship between tropospheric ozone production efficiency and carbon bond emissions}
-\item Supervisor: \href{mailto:c.reeves@uea.ac.uk}{Prof. Claire Reeves}
-\end{innerlist}
+\textbf{MSc in Climate Change with Distinction}  \hfill {2014-2015} \\
+School of Environmental Sciences, University of East Anglia $|$ Norwich, UK \\
+Supervisor: Prof. Claire Reeves \\
+Thesis: Investigation of the relationship between tropospheric ozone production efficiency \\ \hspace{1.1cm} and carbon bond emissions
 
 \vspace{.1in}
-\textbf{Specialist Diploma in Meteorology}  \hfill {2014} \\
-\href{http://www.eng.geogr.msu.ru/}{Faculty of Geography} \\
-\href{http://www.msu.ru/en/}{Lomonosov Moscow State University}
+\textbf{Specialist Diploma in Meteorology}  \hfill {2009-2014} \\
+\href{http://www.eng.geogr.msu.ru/}{Faculty of Geography, Lomonosov Moscow State University} $|$ Moscow, Russia \\
+Supervisor: \href{https://www.researchgate.net/profile/Alexander_Kislov2}{Prof. Alexander V. Kislov} \\
+Thesis: Climatically-induced variations of the Caspian Sea level over the last Millennium
+
+%\section{Conferences}
+\section{Talks}
 \begin{innerlist}
-\item Thesis title: \emph{Climatically-induced variations of the Caspian Sea level over the last Millennium}
-\item Supervisor: \href{mailto:avkislov@mail.ru}{Prof. Alexander V. Kislov}
+\item[Apr 2019] \href{https://meetingorganizer.copernicus.org/EGU2019/EGU2019-11151.pdf}{Impact of $\text{C}_\text{1}$-$\text{C}_\text{3}$ alkyl nitrate chemistry on tropospheric ozone: box and
+global model perspectives}
+\item[] EGU $|$ Vienna, Austria
+%{\bf Zamyatina M.}, Reeves C.E., Archibald A.T., Griffiths P.T., K\"ohler M.O.
+%Geophysical Research Abstracts, Vol. 21, EGU2019-11151, 2019.
+%7-12 April 2019
+%\item[Mar 2019] Impact of $\text{C}_\text{1}$-$\text{C}_\text{3}$ alkyl nitrate chemistry on tropospheric ozone: box and global model perspectives
+%\item[] \href{https://www.uea.ac.uk/environmental-sciences/news-and-events/geochemical-luncheon-club-series/glc-past}{Atmospheric and marine biogeochemistry seminar} $|$ University of East Anglia, UK
+%{\bf Zamyatina M.}, Reeves C.E., Archibald A.T., Griffiths P.T., K\"ohler M.O.
+%18 March 2019
+\item[Apr 2017] Adding new chemistry into UM-UKCA
+\item[] Cambridge-EnvEast Doctoral Alliance Symposium $|$ Cambridge, UK
+%{\bf Zamyatina M.}, Reeves C.E., Archibald A.T., Griffiths P.T., Newland M.J., K\"ohler M.O
+%11 April 2017.
+\item[Sep 2012] Assessment of climatological potential of transboundary air pollution transport in Eastern Siberia and the Russian Far East
+\item[] \href{http://siga.uubf.itu.edu.tr/atmosfer/index.php/aqm/aqm2012/index}{Air Quality Management at Urban, Regional and Global Scales 4th International Symposium/IUAPPA Regional Conference} $|$ Istanbul, Turkey
+%Gromov S.A., Gromov S.S., {\bf Zamyatina M.}.
+%10-13 September 2012.
 \end{innerlist}
 
-\section{Research Experience}
-\textbf{Internship in Actinometry} \hfill {Jun-Jul 2013}
+\section{Posters}
 \begin{innerlist}
-\item[] Department of Actinometry, \\
-        \href{http://www.momsu.ru/english.html}{Meteorological Observatory}, \\
-        Lomonosov Moscow State University \\
-        Supervisor: Senior Research Scientist, Olga A. Shilovtseva
-\end{innerlist}
-\vspace{.1in}
-        
-\textbf{Internship in Atmospheric Chemistry} \hfill {Jun-Jul 2012}
-\begin{innerlist}
-\item[] Laboratory of Program Maintenance and Information Support, \\
-        Department of Environmental Pollution Assessments, \\
-        \href{http://www.igce.ru/}{Institute of Global Climate and Ecology}, \\
-        Roshydromet and Russian Academy of Sciences\\
-        Supervisor: \href{mailto:Sergey.Gromov@igce.ru}{Head of laboratory, Sergey A. Gromov} \
-\item\small data processing of regional and background environmental contamination in 
-            East Asia based on data of \href{http://www.eanet.asia/}{Acid Deposition Monitoring Network
-            in East Asia (EANET)}
-\item\small meteorological and climatological analysis of observational data
+\item[Sep 2018] Impact of alkyl nitrate chemistry on tropospheric ozone 
+\item[] \href{http://icacgp-igac2018.org/}{2018 joint 14th iCACGP  Quadrennial Symposium/15th IGAC  Science Conference} $|$ Takamatsu, Japan
+%{\bf Zamyatina M.}, Reeves C.E., Archibald A.T., Griffiths P.T., K\"ohler M.O.
+%Poster 2.092
+%25-29 September 2018
+\item[Apr 2018] \href{https://meetingorganizer.copernicus.org/EGU2018/EGU2018-5206.pdf}{Impact of $\text{C}_\text{1}$-$\text{C}_\text{5}$ alkyl nitrate chemistry on tropospheric ozone - a box modelling study} 
+\item[] EGU $|$ Vienna, Austria
+%\bf Zamyatina M.}, Reeves C.E., Archibald A.T., Griffiths P.T., K\"ohler M.O.
+%Geophysical Research Abstracts, Vol. 20, EGU2018-5206, 2018.
+%8-13 April 2018
+%\item[Mar 2018] Impact of $\text{C}_\text{1}$-$\text{C}_\text{5}$ alkyl nitrate chemistry on tropospheric ozone - a box modelling study
+%\item[] Cambridge-EnvEast Doctoral Alliance Symposium $|$ Cambridge, UK
+%19-20 March 2018.
 \end{innerlist}
 
-\section{Professional Experience}
-\textbf{Weather Forecaster} \hfill {Aug-Sep 2013}
+\section{Proceedings}
+%\begin{bibsection}
 \begin{innerlist}
-\item[] Forecast and Briefing Service, \\
-        Branch of Main Aviation Meteorological Centre, \\
-        Sheremetyevo International Airport, Moscow \\
+\item Gromov S.A., Gromov S.S., {\bf Zamyatina M.}, Trifonova-Yakovleva A.M. 2013. First-order evaluation of transboundary pollution fluxes in areas of EANET stations in Eastern Siberia and the Russian Far East. \href{https://www.eanet.asia/wp-content/uploads/2019/04/SciBull_Sep_2013.pdf}{EANET Science Bulletin, 3}:195-203.
+%\item Sergeev D., {\bf Zamyatina M.}, Stepanenko V. 2013. \emph{Thermal regime features of Kronotsky lake (Kronotsky Nature Reserve)}. \href{http://istina.msu.ru/publications/article/5336939/}{Kronotsky State Natural Biosphere Reserve Proceedings, Vol. 3. p. 29-41, 2013} (in Russian).
+\item Sergeev D., {\bf Zamyatina M.}, Stepanenko V. 2013. \href{http://istina.msu.ru/publications/article/5336939/}{Thermal regime features of Kronotsky lake} (in Russian). Kronotsky State Natural Biosphere Reserve Proceedings, 3: 29-41.
+%\item Barabanova O.V., Fedorov G.A., Khrupolova E.A., Konstantinov P.I., Kukanova E.A., Malinina E.P., Sergeev D.E., Sokolova L.A., Stepanenko V.M., Varentsov M.V., Veresemskaya P.S., {\bf Zamyatina M.Yu.}, Zheleznova I.V. \emph {Experimental investigation and remote sensing of boundary layer in high latitudes (evidence from the coastal zone of the White Sea)}. \href{http://lomonosov-msu.ru/archive/Lomonosov_2012/structure_6_1716.htm}{Proceedings of the International Youth Science Forum Lomonosov-2012}, Moscow, Russia, 2012 (in Russian).
+%\item Barabanova O.V., Budaev M.E., Debolskiy A.V., Glebova E.S., Kukanova E.A., Melnik K.O., Platonov V.S., Sergeev D.E., Varentsov M.V., {\bf Zamyatina M.Yu.}, Zhelesnova I.V. \emph{The dynamics of the atmospheric boundary layer and its interaction with the underlying surface in the coastal zone of the White Sea}. \href{http://lomonosov-msu.ru/archive/Lomonosov_2011/structure_5_1476.htm}{Proceedings of the International Youth Science Forum Lomonosov-2011}, Moscow, Russia, 2011 (in Russian).
+%\end{bibsection}
 \end{innerlist}
 
-\textbf{Technician} \hfill {Jun-Jul 2013}
+\section{Awards}
 \begin{innerlist}
-\item[] Department of Actinometry, \\
-        \href{http://www.momsu.ru/english.html}{Meteorological Observatory}, \\
-        Lomonosov Moscow State University   
+\item[2015-2019] \textbf{Lord Zuckerman Studentship} \\
+School of Environmental Sciences, University of East Anglia $|$ Norwich, UK
+\item[2014-2015] \textbf{\href{https://www.uea.ac.uk/study/postgraduate/scholarships/the-simon-wharmby-postgraduate-scholarship-in-environmental-science}{Simon Wharmby Postgraduate Scholarship}} \\
+School of Environmental Sciences, University of East Anglia $|$ Norwich, UK
+\item[2012] \textbf{World Meteorological Organization travel grant}
 \end{innerlist}
-
-\section{Fieldwork Experience}
-
-\textbf{Field research in Meteorology} \hfill {Jul-Aug 2012}
-\begin{innerlist}
-\item[] \href{http://kronoki.org/}{Kronotsky Nature Reserve}, Kamchatka pen., Russia \
-\item\small attempt to understanding of prevailing mesoscale processes through wind characteristic
-            measurements and lake hydrothermodynamical modelling
-\end{innerlist}
-
-\vspace{.1in}
-\textbf{Field research in Meteorology} \hfill {Jan-Feb 2012}
-\begin{innerlist}
-\item[] \href{http://en.wsbs-msu.ru/}{White Sea Biological Station}, Republic of Karelia, Russia \
-\item\small comparison of analytical methods for calculating the dynamics of convective boundary
-            layer over polynya with observational data
-\end{innerlist}
-
-\vspace{.1in}
-\textbf{Practical training in Meteorology} \hfill {Jun-Jul 2011}
-\begin{innerlist}
-\item[] \href{http://www.eng.geogr.msu.ru/practics/stations/khibiny/}{Khibiny Teaching and Research Station}, Murmansk Oblast, Russia \
-\item\small curricular practical trainings in atmospheric science basic field techniques (profiling of atmosphere, atmospheric stability and radiative measurements)
-\end{innerlist}
-
-\vspace{.1in}
-\vspace{.1in}
-\textbf{Field research in Meteorology} \hfill {Jan-Feb 2011}
-\begin{innerlist}
-\item[] \href{http://en.wsbs-msu.ru/}{White Sea Biological Station}, Republic of Karelia, Russia
-\item\small gained practical experience of using various meteorological instruments in severe winter conditions
-\end{innerlist}
-
-\vspace{.1in}
-\textbf{General geographic practical training} \hfill {Jun-Jul 2010}
-\begin{innerlist}
-\item[] \href{http://www.eng.geogr.msu.ru/practics/stations/satin/}{Satino Teaching and Research Station}, Kaluga Oblast, Russia \
-\item\small curricular practical trainings in topography, geology and geomorphology, soil science, biogeography, meteorology, hydrology and landscape science
-\end{innerlist}
-
-\section{Teaching experience}
-\textbf{Associate Tutor} \hfill {Oct 2015 - present}
-\begin{innerlist}
-\item[] {\href {https://www.uea.ac.uk/}{University of East Anglia}} \\
-        Modules:
-        \begin{innerlist}
-        \item\small Numerical Skills for Scientists
-        \item\small Atmospheric Chemistry and Global Change 
-        \end{innerlist}
-\end{innerlist}
-
-\section{Publications}
-\begin{bibsection}
-\item Gromov S.A., Gromov S.S., {\bf Zamyatina M.Yu.}, Trifonova-Yakovleva A.M. \emph{First-order evaluation of transboundary pollution fluxes in areas of EANET stations in Eastern Siberia and the Russian Far East}. \href{http://www.eanet.asia/product/science_bulletin/Sep_2013.pdf}{EANET Science Bulletin Vol. 3, p. 195-203, 2013}.
-\item Sergeev D., {\bf Zamyatina M.}, Stepanenko V. \emph{Features of temperature regime of Kronotskoe lake (Kronotsky Nature Reserve)}. \href{http://istina.msu.ru/publications/article/5336939/}{Proceedings of Kronotsky Nature Reserve Vol. 3. p. 29-41, 2013} (in Russian).
-\end{bibsection}
-
-\section{Conference Proceedings}
-\begin{innerlist}
-\item Gromov S.A., Gromov S.S., {\bf Zamyatina M.Yu.} 2012. \emph{Assessment of climatological potential of trasboudary air pollution transport in Eastern Siberia and the Russian Far East}. Proceedings of the \href{http://aqm2012.itu.edu.tr/}{Air Quality Management at Urban, Regional and Global Scales 4th International Symposium and IUAPPA Regional Conference (AQM2012)}, Istanbul, Turkey. Selected papers: 109.
-\item Barabanova O.V., Fedorov G.A., Khrupolova E.A., Konstantinov P.I., Kukanova E.A., Malinina E.P., Sergeev D.E., Sokolova L.A., Stepanenko V.M., Varentsov M.V., Veresemskaya P.S., {\bf Zamyatina M.Yu.}, Zheleznova I.V. 2012. \emph {Experimental investigation and remote sensing of boundary layer in high latitudes (evidence from the coastal zone of the White Sea)}. \href{http://lomonosov-msu.ru/archive/Lomonosov_2012/structure_6_1716.htm}{Proceedings of the International Youth Science Forum Lomonosov-2012}, Moscow, Russia (in Russian).
-\item Barabanova O.V., Budaev M.E., Debolskiy A.V., Glebova E.S., Kukanova E.A., Melnik K.O., Platonov V.S., Sergeev D.E., Varentsov M.V., {\bf Zamyatina M.Yu.}, Zhelesnova I.V. 2011. \emph{The dynamics of the atmospheric boundary layer and its interaction with the underlying surface in the coastal zone of the White Sea}. \href{http://lomonosov-msu.ru/archive/Lomonosov_2011/structure_5_1476.htm}{Proceedings of the International Youth Science Forum Lomonosov-2011}, Moscow, Russia (in Russian).
-\end{innerlist}
-
-\section{Poster presentations}
-\begin{innerlist}
-\item {\bf Zamyatina M.}, Reeves C.E., Newland M.J., Archibald A.T., Griffiths P.T. \emph{Is human activity affecting the atmosphere’s ability to clean itself of pollutants?} UKCA Theory and Practice Workshop, 4-8 January 2016, Cambridge, UK.
-\end{innerlist}
-
-\section{Scholarships and Awards}
-\textbf{Lord Zuckerman Studentship} \hfill {2015}
-\begin{innerlist}
-\item[] School of Environmental Sciences, University of East Anglia
-\end{innerlist}
-\vspace{.1in}
-\textbf{Simon Wharmby Postgraduate Scholarship} \hfill {2014/15}
-\begin{innerlist}
-\item[] School of Environmental Sciences, University of East Anglia
-\end{innerlist}
-\vspace{.1in}
-\textbf{World Meteorological Organization travel financial support} \hfill {2012}
 
 \section{Skills}
-\textbf{Languages}
-\begin{innerlist}
-\item Russian (mother-tongue)
-\item English (IELTS 7.0)
-%\item French (reading knowledge)
-\end{innerlist}
-
-\vspace{.1in}
-\textbf{Computing Skills}
-\begin{innerlist}
-\item Operating system (Linux, Windows)
-%\item Meteorological application suite (\href{http://mapmakers.ru/en/main/products/gis.aspx}{GIS Meteo},
+\begin{minipage}[t]{.6\textwidth}
+  \textbf{Computing}
+  \begin{innerlist}
+  \item Operating system: Linux, Windows
+  %\item Meteorological application suite (\href{http://mapmakers.ru/en/main/products/gis.aspx}{GIS Meteo},
 %\href{http://www.scanex.ru/en/software/default.asp?submenu=meteogamma&id=index}{MeteoGamma})
-\item Data analysis and visualization (Python, \Matlab, R, NCL, NCO)
-\item Version control (Git)
-\item Document preparation (\LaTeX, Microsoft Office)
-\item Familiar with ArcGIS
-\end{innerlist}
+  \item Data analysis: Python, \Matlab, R, NCL
+  \item Version control: Git
+  \item Document preparation: \LaTeX
+  \item Familiar with ArcGIS
+  \end{innerlist}
+\end{minipage}%
+\begin{minipage}[t]{.4\textwidth}
+  \textbf{Languages}
+  \begin{innerlist}
+  \item Russian: native speaker
+  \item English: fluent
+  \item French: beginner
+  \end{innerlist}
+\end{minipage}
 
-\section{Personal and Professional Development}
-\textbf{\href {https://www.ncas.ac.uk/index.php/en/nerc-ppsda-schools/introduction-to-ukca}{UKCA Theory and Practice Workshop}} \hfill {4-8 Jan 2016} \\
-Introduction to the main components of the United Kingdom Chemistry and Aerosols model (UKCA), including exercises on adaptation of the model to various research purposes, running it and solving common problems
-
-\vspace{.1in}
-\textbf{\href {https://www.ncas.ac.uk/index.php/en/nerc-ppsda-schools/introduction-to-unified-model}{Introduction to Unified Model}} \hfill {16-18 Dec 2015} \\
-Introduction to the Met Office Unified Model (UM), providing theoretical and practical experience of setting up experiments and running the model
-
-\vspace{.1in}
-\textbf{\href{https://www.ncas.ac.uk/index.php/en/introduction-to-atmospheric-science-course}{Introduction to Atmospheric Science}} \hfill {23-27 Nov 2015} \\
-Introduction to key concepts in atmospheric science, covering such topics as atmospheric dynamics, composition of the atmosphere and climate change
-
-\vspace{.1in}
-\textbf{\href{http://gcc.aos.ecu.edu/}{Global Climate Change course}} \hfill {2011(fall)} \\
-Successfully completed Global Climate Change course taught by East Carolina University (USA) in partnership with Shandong University (China), Faculdade de Jaguariuna (Brazil), Lomonosov Moscow State University (Russia) and TUD SUD America de Mexico (Mexico)
-
-\vspace{.1in}
-Completed on-line \textbf{\href{https://www.codecademy.com/}{Codecademy}} courses:
-\begin{itemize}
-		\item Python
-\end{itemize}
-
-Completed on-line \textbf{\href{https://www.coursera.org/}{Coursera}} courses:
+\section{Vocational $\newline$ Training}
 \begin{innerlist}
-        \item The Data Scientist’s Toolbox
-        \item \href{https://www.coursera.org/account/accomplishments/records/nuPFsbVDd55fwCAZ}{R Programming}
-        \item Getting and Cleaning Data
-        \item Exploratory Data Analysis
-\end{innerlist}
-
-\vspace{.1in}
-Completed on-line \textbf{\href{https://www.meted.ucar.edu/}{MetEd}} modules:
+\item[21-22 Apr 2016] \textbf{\href{https://www.metoffice.gov.uk/research/modelling-systems/dispersion-model}{NAME} workshop}
 \begin{innerlist}
-        \item Climate Change: Fitting the Pieces Together
-        \item Introduction to Climate Models
-        \item Introduction to Statistics in Climatology
+\item\small introduction to the Met Office Numerical Atmospheric dispersion Modelling Environment (NAME), installing and running the model locally or on \href{http://www.jasmin.ac.uk/}{JASMIN} super-computer
+\end{innerlist}
+\item[4-8 Jan 2016] \textbf{UKCA Theory and Practice Workshop}
+\begin{innerlist}
+\item\small introduction to the main components of the Met Office United Kingdom Chemistry and Aerosols (UKCA) model, including exercises on adaptation of the model to various research purposes, running it and solving common problems
+\end{innerlist}
+\item[16-18 Dec 2015] \textbf{Introduction to Unified Model}
+\begin{innerlist}
+\item\small introduction to the Met Office Unified Model (UM), providing theoretical and practical experience of setting up experiments and running the model
+\end{innerlist}
+\item[23-27 Nov 2015] \textbf{\href{https://www.ncas.ac.uk/index.php/en/introduction-to-atmospheric-science-course}{Introduction to Atmospheric Science}}
+\begin{innerlist}
+\item\small introduction to key concepts in atmospheric science, covering such topics as atmospheric dynamics, composition of the atmosphere and climate change
+\end{innerlist}
+\item[2015-2019] \textbf{\href{http://www.enveast.ac.uk/programme}{EnvEast Doctoral Training Programme}}
+%\item[autumn 2011] \textbf{\href{http://gcc.aos.ecu.edu/}{Global Climate Change course}}
+%\begin{innerlist}
+%\item\small course taught by the East Carolina University (USA) in partnership with the Shandong University (China), Faculdade de Jaguariuna (Brazil), Lomonosov Moscow State University (Russia) and TUD SUD America de Mexico (Mexico)
+%\end{innerlist}
 \end{innerlist}
 
-\vspace{.1in}
-\textbf{Member of the Royal Meteorological Society}
+%\vspace{.1in}
+%Completed on-line \textbf{\href{https://www.codecademy.com/}{Codecademy}} courses:
+%\begin{itemize}
+%		\item Python
+%\end{itemize}
+%
+%Completed on-line \textbf{\href{https://www.coursera.org/}{Coursera}} courses:
+%\begin{innerlist}
+%        \item The Data Scientist’s Toolbox
+%        \item \href{https://www.coursera.org/account/accomplishments/records/nuPFsbVDd55fwCAZ}{R Programming}
+%        \item Getting and Cleaning Data
+%        \item Exploratory Data Analysis
+%\end{innerlist}
+%
+%\vspace{.1in}
+%Completed on-line \textbf{\href{https://www.meted.ucar.edu/}{MetEd}} modules:
+%\begin{innerlist}
+%        \item Climate Change: Fitting the Pieces Together
+%        \item Introduction to Climate Models
+%        \item Introduction to Statistics in Climatology
+%\end{innerlist}
+%
+%\vspace{.1in}
+%\textbf{Member of the Royal Meteorological Society}
+
+\section{Vocational $\newline$ Experience}
+\begin{innerlist}
+\item[Aug-Sep 2013] \textbf{Weather Forecaster} \\
+Forecast and Briefing Service, Branch of Main Aviation Meteorological Centre, Sheremetyevo International Airport $|$ Moscow, Russia
+\item[Jun-Jul 2013] \textbf{Technician} \\
+Department of Actinometry, \href{http://www.momsu.ru/english.html}{Meteorological Observatory}, Lomonosov Moscow State University $|$ Moscow, Russia 
+\end{innerlist}
+
+\section{Interships}
+\begin{innerlist}
+\item[Jun-Jul 2013] Department of Actinometry, Meteorological Observatory, Lomonosov Moscow State University $|$ Moscow, Russia \\
+Supervisor: Senior Research Scientist Olga A. Shilovtseva
+\begin{innerlist}
+\item\small indoor solar radiation measurements
+\end{innerlist}
+\item[Jun-Jul 2012] Laboratory of Program Maintenance and Information Support, Department of Environmental Pollution Assessments, \href{http://www.igce.ru/}{Institute of Global Climate and Ecology}, Roshydromet and Russian Academy of Sciences $|$ Moscow, Russia \\
+Supervisor: Head of laboratory \href{http://www.igce.ru/page/gromov}{Sergey A. Gromov}
+\begin{innerlist}
+\item\small analysis of the \href{http://www.eanet.asia/}{Acid Deposition Monitoring Network in East Asia (EANET)} data
+\end{innerlist}
+\end{innerlist}
+
+\section{Fieldwork}
+\begin{innerlist}
+\item[Jul-Aug 2012] \href{http://kronoki.org/}{Kronotsky Nature Reserve} $|$ Kamchatka peninsula, Russia
+\begin{innerlist}
+\item\small understanding prevailing mesoscale processes through wind measurements and lake hydrothermodynamical modelling
+\end{innerlist}
+\item[Jan-Feb 2011/12] \href{http://en.wsbs-msu.ru/}{White Sea Biological Station} $|$ Republic of Karelia, Russia
+\begin{innerlist}
+\item\small practical experience in using meteorological instruments in severe winter conditions
+\item\small comparing observational data with analytical methods of calculating the dynamics of convective boundary layer over a polynya
+\end{innerlist}
+\item[Jun-Jul 2011] \href{http://www.eng.geogr.msu.ru/practics/stations/khibiny/}{Khibiny Teaching and Research Station} $|$ Murmansk Oblast, Russia
+\begin{innerlist}
+\item\small profiling of the atmosphere, measurements of atmospheric stability and solar radiation
+%curricular practical training in atmospheric science
+\end{innerlist}
+\item[Jun-Jul 2010] \href{http://www.eng.geogr.msu.ru/practics/stations/satin/}{Satino Teaching and Research Station} $|$ Kaluga Oblast, Russia
+\begin{innerlist}
+\item\small curricular training in cartography, geology, geomorphology, soil science, biogeography, meteorology, hydrology and landscape science
+\end{innerlist}
+\end{innerlist}
+
+\section{Teaching}
+\begin{innerlist}
+\item[Jan 2018] \textbf{Instructor} \\
+Training course Introduction to Python in Environmental Sciences \\
+University of East Anglia $|$ Norwich, UK
+\item[2015-2018] \textbf{Associate Tutor} \\
+Modules: Numerical Skills for Scientists, Atmospheric Chemistry and Global Change, Atmospheric Composition (Measurements and Modelling), Atmosphere $\&$ Oceans I \\
+University of East Anglia $|$ Norwich, UK
+\end{innerlist}
 
 \section{Outreach}
-Co-maintainer of the {\href {https://twitter.com/atmoschemuea}{@AtmosChemUEA}} twitter account.
-
-\section{Voluntary Work Experience}
-\textbf{Sochi2014 Olympic Games} \hfill {Jan-Feb 2014}
 \begin{innerlist}
-\item[] Sochi, Russia \\
-        {\em Meteo-office Assistant} at Sochi2014 Headquarters (Imeretinka) \\   
+\item[Nov 2015-present] Maintainer of {\href {https://twitter.com/atmoschemuea}{@AtmosChemUEA}} Twitter account
+\item[Sep 2017-Jun 2018] Co-organiser of the \href{https://www.uea.ac.uk/environmental-sciences/news-and-events/atmospheric-and-marine-biogeochemistry-seminars}{Atmospheric and Marine Biogeochemistry seminars} \\
+University of East Anglia $|$ Norwich, UK
 \end{innerlist}
 
-\textbf{London Wildlife Workcamp} \hfill {Sep 2013}
-\begin{innerlist}
-\item[] London, United Kingdom \\
-        VAP UK-04       
-\item\small learned about wildlife in London with \href{http://www.vap.org.uk/}{Voluntary Action for Peace (VAP)} \
-\item\small practical conservation work with \href{http://www.wildlondon.org.uk/}{London Wildlife Trust} on some of their more remote nature reserves in South London \\
-\end{innerlist}
+%\section{Volunteering}
+%\vspace{.2in}
+%\begin{innerlist}
+%\item[Jan-Feb 2014] \textbf{Sochi2014 Olympic Games} $|$ Sochi, Russia \\
+%Meteo-Office Assistant at the Sochi2014 Headquarters (Imeretinka)
+%\item[Sep 2013] \textbf{London Wildlife Workcamp} (VAP UK-04) $|$ London, UK
+%\begin{innerlist}
+%%\item\small learned about wildlife in London with \href{http://www.vap.org.uk/}{Voluntary Action for Peace (VAP)} \
+%\item\small conservation work with \href{http://www.wildlondon.org.uk/}{London Wildlife Trust} in nature reserves in South London \\
+%\end{innerlist}
+%\item[Mar 2013] \textbf{IPC Biathlon and Cross-Country Skiing World Cup finals} $|$ Sochi, Russia \\
+%Meteo-Office Assistant at the Laura Biathlon and Ski Complex
+%\item[Jul-Aug 2011] \textbf{Blossoming meadows} (SDA402) $|$ Vlasim, Czech Republic \\
+%\begin{innerlist}
+%\item\small took care of protected meadows with endangered species under the direction of \href{http://www.csop.cz/index.php?cis_menu=3&m1_id=1257}{Czech Union for Nature Conservation}
+%\end{innerlist}
+%\end{innerlist}
 
-\textbf{IPC Biathlon and Cross-Country Skiing World Cup finals} \hfill {Mar 2013}
-\begin{innerlist}
-\item[] Sochi, Russia \\
-        {\em Meteo-office Assistant} at the Laura Biathlon and Ski Complex \\
-\end{innerlist}
-
-\textbf{Blossoming meadows} \hfill {Jul-Aug 2011}
-\begin{innerlist}
-\item[] Vlasim, Central Bohemian Region, Czech Republic \\
-        SDA402
-\item\small took care of protected meadows with endangered species under the direction of \href{http://www.csop.cz/index.php?cis_menu=3&m1_id=1257}{Czech Union for Nature Conservation}
-\end{innerlist}
-
-\section{Other Work Experience}
-\textbf{Shop Assistant} \hfill {Jun 2012}
-\begin{innerlist}
-\item[] Stradivarius (retail, international women clothing fashion brand)
-\end{innerlist}
+%\section{Other Work Experience}
+%\textbf{Shop Assistant} \hfill {Jun 2012}
+%\begin{innerlist}
+%\item[] Stradivarius (retail, international women clothing fashion brand)
+%\end{innerlist}
 
 %\halfblankline
 
