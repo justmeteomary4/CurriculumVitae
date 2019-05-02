@@ -1,1 +1,1 @@
-My Curriculum Vitae (CV), periodically updated.
+Curriculum Vitae
