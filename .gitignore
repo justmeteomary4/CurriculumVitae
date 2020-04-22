@@ -1,7 +1,8 @@
 *.aux
+*.gz
+*.jpg
 *.log
 *.out
 *.pdf
-*.gz
-*.jpg
-Courses/
+mzamyatina_student_card.JPG
+training/
