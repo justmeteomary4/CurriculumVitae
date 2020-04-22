@@ -29,6 +29,7 @@
 \usepackage{MnSymbol}
 
 \usepackage{datetime}
+\usepackage[version=3]{mhchem}
 
 % Simpler bibsection for CV sections (thanks to natbib for inspiration)
 \makeatletter
@@ -107,7 +108,7 @@
 %
 \usepackage{fancyhdr,lastpage}
 \pagestyle{fancy}
-\pagestyle{empty}      % Uncomment this to get rid of page numbers
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
 \fancyhf{}\renewcommand{\headrulewidth}{0pt}
 \fancyfootoffset{\marginparsep+\marginparwidth}
 \newlength{\footpageshift}
@@ -258,7 +259,7 @@
 %\end{tabular}%
 %University of East Anglia, Norwich Research Park, Norwich, NR4 7TJ, UK\\
 %\faEnvelope~m.zamyatina@uea.ac.uk \faTwitter~chemeteomary \faGithub~chemarista \\
-\includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{logo_fontawesome_email.png} m.zamyatina@uea.ac.uk 
+\includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{logo_fontawesome_email.png} m.zamyatina@exeter.ac.uk 
 \includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{logo_fontawesome_twitter.png} \href{https://twitter.com/m_zamyatina}{m$\_$zamyatina}
 \includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{logo_fontawesome_github.png} \href{https://github.com/mzamyatina}{mzamyatina} \\
 \includegraphics[scale=0.02,decodearray={.1 .5 .5 .5 .5 .5}]{logo_fontawesome_website.png} \href{https://mariazamyatina.wordpress.com/}{mariazamyatina.wordpress.com}
@@ -266,18 +267,22 @@
 \section{Research Interests}
 atmospheric chemistry, numerical modelling, climate change
 
+\section{Professional experience}
+\textbf{Postdoctoral Research Fellow} \hfill {Sep 2019 - Apr 2022}\\
+\href{http://emps.exeter.ac.uk/physics-astronomy/}{School of Physics and Astronomy, University of Exeter} $|$ Exeter, UK\\
+3D chemical modelling of hot Jupiter atmospheres
+
 \section{Education}
-\textbf{PhD in Atmospheric Chemistry}  \hfill {2015-expected 2019} \\
+\textbf{PhD in Atmospheric Chemistry}  \hfill {2015-2019} \\
 \href{https://www.uea.ac.uk/environmental-sciences/}{School of Environmental Sciences, University of East Anglia} $|$ Norwich, UK \\
 Supervisors: \href{https://people.uea.ac.uk/c_reeves}{Prof. Claire Reeves}, \href{https://www.ecmwf.int/en/about/who-we-are/staff-profiles/marcus-koehler}{Dr. Marcus K\"ohler}, \href{https://www.york.ac.uk/chemistry/staff/resstaff/mnewland/}{Dr. Mike Newland} \\
-Thesis: Impact of alkyl nitrate chemistry on tropospheric ozone: box and global model \\
-\hspace{1.1cm} perspectives
+Thesis: Impact of \ce{C1}-\ce{C3} alkyl nitrates on tropospheric chemistry\\
 \begin{innerlist}
-\item updated chemical kinetics of \href{http://www.ukca.ac.uk/wiki/index.php/UKCA}{UKCA}'s standard tropospheric chemistry mechanism
-\item added new alkyl nitrate chemistry into UKCA
+\item updated chemical kinetics of \href{http://www.ukca.ac.uk/wiki/index.php/UKCA}{UM-UKCA}'s standard tropospheric chemistry mechanism
+\item added new alkyl nitrate chemistry into UM-UKCA
 \item tested new mechanism against the \href{http://mcm.leeds.ac.uk/MCM/home.htt}{Master Chemical Mechanism (MCM)} in a box model 
-\item validated UKCA with the \href{https://espo.nasa.gov/atom}{Atmospheric Tomography Mission (ATom)} aircraft data
-\item analysed $\text{HO}_\text{x}$, $\text{NO}_\text{x}$, $\text{NO}_\text{y}$ burdens and distribution in UKCA long-term runs with/without alkyl nitrate photochemical production/direct emissions
+\item validated UM-UKCA with the \href{https://espo.nasa.gov/atom}{Atmospheric Tomography Mission (ATom)} aircraft data
+\item analysed $\text{HO}_\text{x}$, $\text{NO}_\text{x}$, $\text{NO}_\text{y}$ burdens and distribution in UM-UKCA long-term runs with/without alkyl nitrate photochemical production/direct emissions
 \item contributed to the \href{https://www.researchgate.net/project/Oxidant-Budgets-of-the-Northern-Hemisphere-Troposphere-Since-1950-OXBUDS}{Oxidant Budgets of the Northern Hemisphere Troposphere Since 1950 (OXBUDS)} project
 \end{innerlist}
 
@@ -334,16 +339,20 @@ global model perspectives}
 \end{innerlist}
 
 \section{Proceedings}
+%\section{Publications and proceedings}
 %\begin{bibsection}
+%\item[1] {\bf Zamyatina M.}, Reeves C.E., Griffiths P.T., K\"ohler M.O., Archibald  A.T. Sensitivity of UKCA model (vn7.3) to the update of chemical kinetics of the inorganic and $\text{C}_\text{1}$-$\text{C}_\text{3}$ alkane chemistry. Manuscript in preparation.
+%\item[2] {\bf Zamyatina M.}, Reeves C.E., Griffiths P.T., K\"ohler M.O., Archibald  A.T. Impact of $\text{C}_\text{1}$-$\text{C}_\text{3}$ alkyl nitrate chemistry on tropospheric ozone: box and global model perspectives. Manuscript in preparation.
+%\item[3] K\"ohler M.O., Reeves C.E., Archibald  A.T, Griffiths P.T., {\bf Zamyatina M.} Long-term trends in oxidant budgets of the northern hemisphere constrained by alkanes and alkyl nitrate ratios. Manuscript in preparation.
+%\end{bibsection}
 \begin{innerlist}
 \item Gromov S.A., Gromov S.S., {\bf Zamyatina M.}, Trifonova-Yakovleva A.M. 2013. First-order evaluation of transboundary pollution fluxes in areas of EANET stations in Eastern Siberia and the Russian Far East. \href{https://www.eanet.asia/wp-content/uploads/2019/04/SciBull_Sep_2013.pdf}{EANET Science Bulletin, 3}:195-203.
-%\item Sergeev D., {\bf Zamyatina M.}, Stepanenko V. 2013. \emph{Thermal regime features of Kronotsky lake (Kronotsky Nature Reserve)}. \href{http://istina.msu.ru/publications/article/5336939/}{Kronotsky State Natural Biosphere Reserve Proceedings, Vol. 3. p. 29-41, 2013} (in Russian).
 \item Sergeev D., {\bf Zamyatina M.}, Stepanenko V. 2013. \href{http://istina.msu.ru/publications/article/5336939/}{Thermal regime features of Kronotsky lake} (in Russian). Kronotsky State Natural Biosphere Reserve Proceedings, 3: 29-41.
 %\item Barabanova O.V., Fedorov G.A., Khrupolova E.A., Konstantinov P.I., Kukanova E.A., Malinina E.P., Sergeev D.E., Sokolova L.A., Stepanenko V.M., Varentsov M.V., Veresemskaya P.S., {\bf Zamyatina M.Yu.}, Zheleznova I.V. \emph {Experimental investigation and remote sensing of boundary layer in high latitudes (evidence from the coastal zone of the White Sea)}. \href{http://lomonosov-msu.ru/archive/Lomonosov_2012/structure_6_1716.htm}{Proceedings of the International Youth Science Forum Lomonosov-2012}, Moscow, Russia, 2012 (in Russian).
 %\item Barabanova O.V., Budaev M.E., Debolskiy A.V., Glebova E.S., Kukanova E.A., Melnik K.O., Platonov V.S., Sergeev D.E., Varentsov M.V., {\bf Zamyatina M.Yu.}, Zhelesnova I.V. \emph{The dynamics of the atmospheric boundary layer and its interaction with the underlying surface in the coastal zone of the White Sea}. \href{http://lomonosov-msu.ru/archive/Lomonosov_2011/structure_5_1476.htm}{Proceedings of the International Youth Science Forum Lomonosov-2011}, Moscow, Russia, 2011 (in Russian).
-%\end{bibsection}
 \end{innerlist}
 
+\newpage
 \section{Awards}
 \begin{innerlist}
 \item[2015-2019] \textbf{Lord Zuckerman Studentship} \\
@@ -357,10 +366,10 @@ School of Environmental Sciences, University of East Anglia $|$ Norwich, UK
 \begin{minipage}[t]{.6\textwidth}
   \textbf{Computing}
   \begin{innerlist}
-  \item Operating system: Linux, Windows
+  \item Operating system: Linux, Windows, Mac
   %\item Meteorological application suite (\href{http://mapmakers.ru/en/main/products/gis.aspx}{GIS Meteo},
 %\href{http://www.scanex.ru/en/software/default.asp?submenu=meteogamma&id=index}{MeteoGamma})
-  \item Data analysis: Python, \Matlab, R, NCL
+  \item Data analysis: Python, \Matlab, R
   \item Version control: Git
   \item Document preparation: \LaTeX
   \item Familiar with ArcGIS
@@ -447,27 +456,27 @@ Supervisor: Head of laboratory \href{http://www.igce.ru/page/gromov}{Sergey A. G
 \end{innerlist}
 \end{innerlist}
 
-\section{Fieldwork}
-\begin{innerlist}
-\item[Jul-Aug 2012] \href{http://kronoki.org/}{Kronotsky Nature Reserve} $|$ Kamchatka peninsula, Russia
-\begin{innerlist}
-\item\small understanding prevailing mesoscale processes through wind measurements and lake hydrothermodynamical modelling
-\end{innerlist}
-\item[Jan-Feb 2011/12] \href{http://en.wsbs-msu.ru/}{White Sea Biological Station} $|$ Republic of Karelia, Russia
-\begin{innerlist}
-\item\small practical experience in using meteorological instruments in severe winter conditions
-\item\small comparing observational data with analytical methods of calculating the dynamics of convective boundary layer over a polynya
-\end{innerlist}
-\item[Jun-Jul 2011] \href{http://www.eng.geogr.msu.ru/practics/stations/khibiny/}{Khibiny Teaching and Research Station} $|$ Murmansk Oblast, Russia
-\begin{innerlist}
-\item\small profiling of the atmosphere, measurements of atmospheric stability and solar radiation
-%curricular practical training in atmospheric science
-\end{innerlist}
-\item[Jun-Jul 2010] \href{http://www.eng.geogr.msu.ru/practics/stations/satin/}{Satino Teaching and Research Station} $|$ Kaluga Oblast, Russia
-\begin{innerlist}
-\item\small curricular training in cartography, geology, geomorphology, soil science, biogeography, meteorology, hydrology and landscape science
-\end{innerlist}
-\end{innerlist}
+%\section{Fieldwork}
+%\begin{innerlist}
+%\item[Jul-Aug 2012] \href{http://kronoki.org/}{Kronotsky Nature Reserve} $|$ Kamchatka peninsula, Russia
+%\begin{innerlist}
+%\item\small understanding prevailing mesoscale processes through wind measurements and lake hydrothermodynamical modelling
+%\end{innerlist}
+%\item[Jan-Feb 2011/12] \href{http://en.wsbs-msu.ru/}{White Sea Biological Station} $|$ Republic of Karelia, Russia
+%\begin{innerlist}
+%\item\small practical experience in using meteorological instruments in severe winter conditions
+%\item\small comparing observational data with analytical methods of calculating the dynamics of convective boundary layer over a polynya
+%\end{innerlist}
+%\item[Jun-Jul 2011] \href{http://www.eng.geogr.msu.ru/practics/stations/khibiny/}{Khibiny Teaching and Research Station} $|$ Murmansk Oblast, Russia
+%\begin{innerlist}
+%\item\small profiling of the atmosphere, measurements of atmospheric stability and solar radiation
+%%curricular practical training in atmospheric science
+%\end{innerlist}
+%\item[Jun-Jul 2010] \href{http://www.eng.geogr.msu.ru/practics/stations/satin/}{Satino Teaching and Research Station} $|$ Kaluga Oblast, Russia
+%\begin{innerlist}
+%\item\small curricular training in cartography, geology, geomorphology, soil science, biogeography, meteorology, hydrology and landscape science
+%\end{innerlist}
+%\end{innerlist}
 
 \section{Teaching}
 \begin{innerlist}
